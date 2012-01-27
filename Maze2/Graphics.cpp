@@ -228,14 +228,32 @@ void Graphics::main(int index){
 	this->tiles.push(start);
 	this->odwiedzone.insert(start);
 	
-	
+ALLEGRO_TIMER *time = al_create_timer(1.0 / 60);
+
+	ALLEGRO_EVENT_QUEUE *event_queue = NULL;
+	event_queue = al_create_event_queue();
+	al_register_event_source(event_queue, al_get_timer_event_source(time));
+	al_register_event_source(event_queue, al_get_mouse_event_source());
+
+	al_start_timer(time);
 	
 	while(!al_key_down(&this->keyboard_state, ALLEGRO_KEY_ESCAPE)){
 
+		ALLEGRO_EVENT ev;
+		al_wait_for_event(event_queue, &ev);
+		if(ev.type == ALLEGRO_EVENT_TIMER) redraw = true;
+		else if(ev.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN){
+			if(ev.mouse.button & 1){
+				u = ev.mouse.x/SIZE_SQUARE;
+				v = ev.mouse.y/SIZE_SQUARE;
+				mouse = true;
+				//cout << "asd";
+				//done = false;
+			}
+		}
 		
 		
-		
-
+		if(redraw && al_event_queue_is_empty(event_queue)){
 		al_set_target_bitmap(this->buff);
 		al_clear_to_color(al_map_rgb(0, 0, 0));
 		//al_convert_mask_to_alpha(this->buff, al_map_rgb(0, 0, 0));

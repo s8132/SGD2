@@ -1,4 +1,4 @@
-﻿Build started 2012-01-21 23:31:18.
+﻿Build started 2012-01-27 06:58:50.
      1>Project "C:\Users\Marcin\Documents\SGD\lab\Maze2\Maze2\Maze2.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Maze2.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -31,4 +31,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.69
+Time Elapsed 00:00:03.04
