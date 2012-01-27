@@ -50,7 +50,7 @@ void Graphics::initGraph(int width, int height, char *title){
 		cout << "Error z font" << endl;
 	}
 
-	this->point = al_load_bitmap("point09.bmp");
+	this->point = al_load_bitmap("point2.png");
 
 	if(!this->point){
 		cout << "problem z pointem" << endl;
@@ -236,7 +236,7 @@ ALLEGRO_TIMER *time = al_create_timer(1.0 / 60);
 	al_register_event_source(event_queue, al_get_mouse_event_source());
 
 	al_start_timer(time);
-	
+	int klatka=0;
 	while(!al_key_down(&this->keyboard_state, ALLEGRO_KEY_ESCAPE)){
 
 		ALLEGRO_EVENT ev;
@@ -348,6 +348,7 @@ ALLEGRO_TIMER *time = al_create_timer(1.0 / 60);
 		}
 
 		
+		
 
 		if(al_current_time() >= timer+0.01){
 			timer = al_current_time();
@@ -357,7 +358,7 @@ ALLEGRO_TIMER *time = al_create_timer(1.0 / 60);
 					ypos--;
 					go=false;
 					//if(ypos==tile.indexToPixelX(indexf)*SIZE_SQUARE+1) direction=0;
-			
+					klatka=2;
 				}else{
 					go=true;
 				}
@@ -368,6 +369,7 @@ ALLEGRO_TIMER *time = al_create_timer(1.0 / 60);
 					xpos++;
 					go=false;
 					//if(xpos==tile.indexToPixelY(indexf)*SIZE_SQUARE+1) direction=0;
+					klatka=3;
 				}else{
 					go=true;
 				}
@@ -378,6 +380,7 @@ ALLEGRO_TIMER *time = al_create_timer(1.0 / 60);
 					ypos++;
 					go=false;
 					//if(ypos==tile.indexToPixelX(indexf)*SIZE_SQUARE+1) direction=0;
+					klatka=0;
 				}else{
 					go=true;
 				}
@@ -388,6 +391,7 @@ ALLEGRO_TIMER *time = al_create_timer(1.0 / 60);
 					xpos--;
 					go=false;
 					//if(xpos==tile.indexToPixelY(indexf)*SIZE_SQUARE+1) direction=0;
+					klatka=1;
 				}else{
 					go=true;
 				}
@@ -399,7 +403,8 @@ ALLEGRO_TIMER *time = al_create_timer(1.0 / 60);
 		}
 
 
-		al_draw_bitmap(this->point, xpos, ypos, NULL);
+		//al_draw_bitmap(this->point, xpos, ypos, NULL);
+		al_draw_bitmap_region(this->point, 0+15*klatka, 0, 15, 15, xpos, ypos, 0);
 
 		al_set_target_bitmap(al_get_backbuffer(this->display));            
 		//al_clear_to_color(al_map_rgb(57, 10, 70));

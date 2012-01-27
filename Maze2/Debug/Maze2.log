@@ -1,16 +1,16 @@
-﻿Build started 2012-01-27 06:58:50.
+﻿Build started 2012-01-27 10:04:28.
      1>Project "C:\Users\Marcin\Documents\SGD\lab\Maze2\Maze2\Maze2.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\Maze2.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Graphics.cpp
          Graphics.cpp
-     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(437): warning C4101: 'down' : unreferenced local variable
-     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(437): warning C4101: 'up' : unreferenced local variable
-     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(437): warning C4101: 'left' : unreferenced local variable
-     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(437): warning C4101: 'right' : unreferenced local variable
-     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(517): warning C4101: 'way' : unreferenced local variable
-     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(756): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(442): warning C4101: 'down' : unreferenced local variable
+     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(442): warning C4101: 'up' : unreferenced local variable
+     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(442): warning C4101: 'left' : unreferenced local variable
+     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(442): warning C4101: 'right' : unreferenced local variable
+     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(522): warning C4101: 'way' : unreferenced local variable
+     1>c:\users\marcin\documents\sgd\lab\maze2\maze2\graphics.cpp(761): warning C4018: '<' : signed/unsigned mismatch
        ManifestResourceCompile:
          All outputs are up-to-date.
        Link:
@@ -31,4 +31,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.04
+Time Elapsed 00:00:02.80
